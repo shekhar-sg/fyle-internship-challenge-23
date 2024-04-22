@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply
+    bg-gray-900 text-gray-100
+  }
+
+  .button {
+    @apply
+    text-gray-400 whitespace-nowrap rounded-md  shadow-inner active:shadow-gray-400 active:animate-pulse transition-shadow ring-1 ring-gray-400 no-underline
+  }
+
+  .button:disabled {
+    @apply
+    shadow-md text-gray-500 cursor-not-allowed ring-1 ring-gray-600
+  }
+}
+
+
