@@ -6,9 +6,7 @@
     "build": "ng build && ng run fyle-frontend-challenge:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run fyle-frontend-challenge:serve-ssr",
-    "serve:ssr": "node dist/fyle-frontend-challenge/server/main.js",
-    "build:ssr": "ng build && ng run fyle-frontend-challenge:server",
+    "dev:start": "ng serve",
     "prerender": "ng run fyle-frontend-challenge:prerender"
   },
   "private": true,
