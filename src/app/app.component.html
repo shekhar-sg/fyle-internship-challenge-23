@@ -1,7 +1,7 @@
 <app-header/>
 <div class="w-full flex flex-col gap-5 sm:items-center p-4 max-w-[1440px] mx-auto ">
   <div
-    class="flex gap-2 w-full sm:w-1/2 {{gitHubService.username ? 'mt-2' : 'mt-48'}} transition-all">
+    class="flex gap-2 w-full flex-wrap sm:flex-nowrap sm:w-1/2 {{gitHubService.username ? 'mt-2' : 'mt-48'}} transition-all">
     <input
       class="grow bg-gray-800 border-1 rounded-lg px-3 py-1 border-gray-600 text-white ring-1 ring-gray-500"
       type="text" placeholder="Enter username" name="username" #usernameInput
@@ -16,15 +16,15 @@
     </button>
   </div>
   @if (gitHubService.errors.account || gitHubService.errors.repos) {
-    <div class=" w-full flex flex-col gap-2 items-center">
-      <p class="text-red-500">{{ gitHubService.errors.account }}</p>
+  <div class=" w-full flex flex-col gap-2 items-center">
+    <p class="text-red-500">{{ gitHubService.errors.account }}</p>
       <p class="text-red-500">{{ gitHubService.errors.repos }}</p>
     </div>
   } @else if (gitHubService.username) {
-    <app-user-details-section class="w-full"/>
+  <app-user-details-section class="w-full"/>
   } @else {
-    <div class="flex flex-col gap-2 items-center">
-      <p class="text-gray-500">Search for a GitHub user to get started</p>
-    </div>
+  <div class="flex flex-col gap-2 items-center">
+    <p class="text-gray-500">Search for a GitHub user to get started</p>
+  </div>
   }
 </div>
